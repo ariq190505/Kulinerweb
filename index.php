@@ -13,7 +13,7 @@ require "includes/function.php";
 
 <body>
   <header>
-    <h1 style="text-align: center;">Daftar Kuliner Tradisional</h1>
+
     <hr>
   </header>
   <div style="text-align: center;">
@@ -23,7 +23,7 @@ require "includes/function.php";
   <div align="center">
     <?php require "includes/konten.php" ?>
   </div>
-  <footer style="margin-top: 3em; text-align: center;">
+  <footer style="margin-top:5em; text-align: center;">
     <hr>
     Pemrograman Web 1 @ <?= date("Y") ?>
   </footer>

@@ -30,43 +30,55 @@ $data = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Minuman Tradisional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --netflix-red: #E50914;
-            --netflix-black: #141414;
-            --netflix-dark: #000000;
-            --netflix-gray: #808080;
-            --netflix-white: #FFFFFF;
+            --pinterest-red: #e60023;
+            --pinterest-dark: #111111;
+            --pinterest-gray: #767676;
+            --pinterest-light-gray: #efefef;
+            --pinterest-white: #ffffff;
+            --pinterest-hover: #ad081b;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--netflix-black);
-            color: var(--netflix-white);
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--pinterest-dark);
+            color: var(--pinterest-white);
             min-height: 100vh;
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 800px;
-            margin: 80px auto 2rem;
-            padding: 0 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
         }
 
         .page-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--pinterest-white);
+            margin-bottom: 0.5rem;
         }
 
         .form-card {
-            background: #1a1a1a;
+            background: #222222;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .form-group {
@@ -76,63 +88,105 @@ $data = mysqli_fetch_assoc($result);
         .form-label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--netflix-gray);
-            font-size: 0.9rem;
+            color: var(--pinterest-light-gray);
+            font-weight: 500;
+            font-size: 14px;
         }
 
         .form-input {
             width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #333;
-            border-radius: 4px;
-            background: #333;
-            color: var(--netflix-white);
-            font-family: 'Poppins', sans-serif;
+            padding: 12px 16px;
+            background: #333333;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            color: var(--pinterest-white);
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
         }
 
         .form-input:focus {
             outline: none;
-            border-color: var(--netflix-red);
+            border-color: var(--pinterest-red);
+            background: #444444;
         }
 
         .button-group {
             display: flex;
             gap: 1rem;
-            justify-content: flex-end;
             margin-top: 2rem;
         }
 
         .btn {
-            padding: 0.8rem 1.5rem;
+            flex: 1;
+            padding: 12px 16px;
             border: none;
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: var(--transition);
         }
 
         .btn-primary {
-            background: var(--netflix-red);
-            color: var(--netflix-white);
+            background: var(--pinterest-red);
+            color: var(--pinterest-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--pinterest-hover);
         }
 
         .btn-secondary {
-            background: #333;
-            color: var(--netflix-white);
+            background: #333333;
+            color: var(--pinterest-white);
         }
 
-        .btn:hover {
-            opacity: 0.9;
+        .btn-secondary:hover {
+            background: #444444;
+        }
+
+        .form-card {
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
-
-
     <div class="container">
-        <h1 class="page-title">Edit Minuman Tradisional</h1>
+        <div class="form-header">
+            <h1 class="page-title">Edit Minuman Tradisional</h1>
+        </div>
 
         <div class="form-card">
             <form method="post" action="?page=minumanUpdateProses">
@@ -151,8 +205,12 @@ $data = mysqli_fetch_assoc($result);
                 </div>
 
                 <div class="button-group">
-                    <button type="button" class="btn btn-secondary" onClick="document.location='?page=minuman'">Batal</button>
-                    <button type="submit" name="update" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-secondary" onClick="document.location='?page=minuman'">
+                        Batal
+                    </button>
+                    <button type="submit" name="<?= isset($data) ? 'update' : 'submit' ?>" class="btn btn-primary">
+                        <?= isset($data) ? 'Update' : 'Simpan' ?>
+                    </button>
                 </div>
             </form>
         </div>

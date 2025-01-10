@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuliner Nusantara</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --netflix-red: #E50914;
-            --netflix-black: #141414;
-            --netflix-dark: #000000;
-            --netflix-gray: #808080;
-            --netflix-white: #FFFFFF;
+            --pinterest-red: #e60023;
+            --pinterest-black: #111111;
+            --pinterest-dark-gray: #2c2c2c;
+            --pinterest-light-gray: #767676;
+            --pinterest-white: #FFFFFF;
+            --nav-height: 64px;
         }
 
         * {
@@ -23,330 +24,330 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--netflix-black);
-            color: var(--netflix-white);
+            background-color: var(--pinterest-black);
+            color: var(--pinterest-white);
             overflow-x: hidden;
         }
 
-        .featured-hero {
-            height: 100vh;
-            position: relative;
-            background: url('assets/img/banner.jpeg') center/cover;
+        nav {
+            background: var(--pinterest-black);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--nav-height);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .featured-gradient {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg,
-                    rgba(20, 20, 20, 0.7) 0%,
-                    rgba(20, 20, 20, 0.4) 50%,
-                    rgba(20, 20, 20, 0.9) 90%,
-                    var(--netflix-black) 100%);
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-brand {
+            color: var(--pinterest-red);
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--pinterest-light-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 24px;
+        }
+
+        .nav-links a:hover {
+            color: var(--pinterest-white);
+            background-color: var(--pinterest-dark-gray);
+        }
+
+        .featured-hero {
+            padding-top: calc(var(--nav-height) + 2rem);
+            min-height: 80vh;
+            background: var(--pinterest-black);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .featured-content {
-            position: absolute;
-            bottom: 25%;
-            left: 4%;
-            width: 40%;
+            padding: 2rem 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .featured-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 5rem;
+            font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: var(--pinterest-white);
         }
 
         .featured-description {
             font-size: 1.2rem;
+            color: var(--pinterest-light-gray);
             margin-bottom: 2.5rem;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .featured-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
+            justify-content: center;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 4px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 24px;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
-        }
-
-        .btn-play {
-            background: var(--netflix-white);
-            color: var(--netflix-black);
-            border: none;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .btn-more {
-            background: rgba(109, 109, 110, 0.7);
-            color: var(--netflix-white);
             border: none;
         }
 
-        .trending-section {
-            padding: 4rem 4%;
-            position: relative;
+        .btn-primary {
+            background: var(--pinterest-red);
+            color: var(--pinterest-white);
         }
 
-        .trending-badge {
-            background: var(--netflix-red);
-            color: var(--netflix-white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 2rem;
-            font-weight: 500;
+        .btn-primary:hover {
+            background: #d50021;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--pinterest-dark-gray);
+            color: var(--pinterest-white);
+        }
+
+        .btn-secondary:hover {
+            background: #3c3c3c;
+            transform: translateY(-2px);
         }
 
         .content-row {
-            position: relative;
-            margin: 4rem 0;
+            padding: 2rem 4%;
+            margin-bottom: 2rem;
         }
 
         .row-header {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin-bottom: 1.5rem;
-            padding: 0 4%;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
         }
 
         .row-header h2 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--pinterest-white);
         }
 
         .see-all {
-            color: var(--netflix-gray);
+            color: var(--pinterest-red);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 24px;
         }
 
         .see-all:hover {
-            color: var(--netflix-white);
+            background-color: var(--pinterest-dark-gray);
         }
 
         .content-slider {
-            display: flex;
-            overflow-x: auto;
-            gap: 1.5rem;
-            padding: 1.5rem 4%;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-        }
-
-        .content-slider::-webkit-scrollbar {
-            display: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0.5rem;
         }
 
         .content-card {
-            min-width: 320px;
-            background: #1a1a1a;
-            border-radius: 8px;
+            background: var(--pinterest-dark-gray);
+            border-radius: 16px;
             overflow: hidden;
             transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            break-inside: avoid;
         }
 
         .content-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .card-image {
             width: 100%;
-            height: 200px;
+            aspect-ratio: 3/4;
             object-fit: cover;
+            vertical-align: middle;
         }
 
         .card-content {
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
-        .card-metadata {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .match-score {
-            color: #46d369;
-            font-weight: 600;
+        .card-content h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--pinterest-white);
+            font-weight: 500;
         }
 
         .card-tags {
             display: flex;
-            gap: 0.8rem;
-            margin-top: 0.8rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .tag {
-            font-size: 0.9rem;
-            color: var(--netflix-gray);
+            font-size: 0.75rem;
+            color: var(--pinterest-light-gray);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
         }
 
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            padding: 2rem 4%;
-        }
-
-        .category-card {
-            position: relative;
-            height: 180px;
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .category-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .category-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .category-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .content-card:hover .tag {
+            background: var(--pinterest-red);
+            color: var(--pinterest-white);
         }
 
         @media (max-width: 768px) {
-            .featured-content {
-                width: 90%;
-                bottom: 20%;
+            .nav-links {
+                display: none;
             }
 
             .featured-title {
-                font-size: 3.5rem;
+                font-size: 2.5rem;
             }
 
             .featured-description {
                 font-size: 1rem;
+                padding: 0 1rem;
             }
 
-            .content-card {
-                min-width: 280px;
+            .content-slider {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 16px;
             }
 
-            .row-header h2 {
-                font-size: 1.5rem;
+            .card-image {
+                aspect-ratio: 1;
             }
         }
     </style>
 </head>
 
 <body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.php" class="nav-brand">Kuliner Nusantara</a>
+            <div class="nav-links">
+                <a href="?page=makanan">Makanan</a>
+                <a href="?page=minuman">Minuman</a>
+                <a href="?page=tentang">Tentang</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="featured-hero">
-        <div class="featured-gradient"></div>
         <div class="featured-content">
             <h1 class="featured-title">KULINER NUSANTARA</h1>
             <p class="featured-description">Jelajahi keragaman cita rasa Indonesia melalui koleksi makanan dan minuman tradisional terbaik dari Sabang sampai Merauke.</p>
             <div class="featured-buttons">
-                <button class="btn btn-play">▶ Jelajahi</button>
-                <button class="btn btn-more">ℹ Info Lebih Lanjut</button>
+                <button class="btn btn-primary">Jelajahi</button>
+                <button class="btn btn-secondary">Info Lebih Lanjut</button>
             </div>
         </div>
     </div>
 
-
-
-
-    </div>
-    </section>
-
     <section class="content-row">
         <div class="row-header">
             <h2>Hidangan Tradisional</h2>
-            <a href="?page=makanan" class="see-all">Lihat Semua ></a>
+            <a href="?page=makanan" class="see-all">Lihat Semua</a>
         </div>
         <div class="content-slider">
-            <?php
-            $queryMakanan = "SELECT * FROM tbl_makanan ORDER BY id_makanan ASC LIMIT 6";
-            $resultMakanan = mysqli_query($conn, $queryMakanan);
+        <?php
+$queryMakanan = "SELECT * FROM tbl_makanan ORDER BY RAND() LIMIT 6";
+$resultMakanan = mysqli_query($conn, $queryMakanan);
 
-            if (mysqli_num_rows($resultMakanan) > 0) {
-                $counter = 1; // Counter untuk gambar
-                while ($makanan = mysqli_fetch_assoc($resultMakanan)) {
-                    // Urutkan gambar menggunakan counter
-            ?>
-                    <div class="content-card">
-                        <img src="images/makanan/<?= $counter; ?>.jpg" alt="<?= htmlspecialchars($makanan['nama_makanan']); ?>" class="card-image">
-                        <div class="card-content">
-                            <h3><?= htmlspecialchars($makanan['nama_makanan']); ?></h3>
-                            <div class="card-tags">
-                                <span class="tag"><?= htmlspecialchars($makanan['daerah_makanan']); ?></span>
-                            </div>
-                        </div>
-                    </div>
-            <?php
-                    $counter++; // Tambahkan counter
-                }
-            }
-            ?>
-
-        </div>
+if (mysqli_num_rows($resultMakanan) > 0) {
+    while ($makanan = mysqli_fetch_assoc($resultMakanan)) {
+?>
+        <div class="content-card">
+            <img src="images/makanan/<?= htmlspecialchars($makanan['gambar']); ?>" 
+                 alt="<?= htmlspecialchars($makanan['nama_makanan']); ?>" 
+                 class="card-image">
+            <div class="card-content">
+                <h3><?= htmlspecialchars($makanan['nama_makanan']); ?></h3>
+                <div class="card-tags">
+                    <span class="tag"><?= htmlspecialchars($makanan['daerah_makanan']); ?></span>
+                </div>
+            </div>
     </section>
+        </div>
+<?php
+    }
+}
+?>
 
+    </section>
+    
     <section class="content-row">
-        <div class="row-header">
-            <h2>Minuman Tradisional</h2>
-            <a href="?page=minuman" class="see-all">Lihat Semua ></a>
-        </div>
-        <div class="content-slider">
-            <?php
-            $queryMinuman = "SELECT * FROM tbl_minuman ORDER BY id_minuman ASC LIMIT 6";
-            $resultMinuman = mysqli_query($conn, $queryMinuman);
+    <div class="row-header">
+        <h2>Minuman Tradisional</h2>
+        <a href="?page=minuman" class="see-all">Lihat Semua</a>
+    </div>
+    
+    <div class="content-slider">
+        <?php
+        $queryMinuman = "SELECT * FROM tbl_minuman ORDER BY RAND() LIMIT 6";
+        $resultMinuman = mysqli_query($conn, $queryMinuman);
 
-            if (mysqli_num_rows($resultMinuman) > 0) {
-                $counter = 1; // Counter untuk gambar
-                while ($minuman = mysqli_fetch_assoc($resultMinuman)) {
-                    // Urutkan gambar menggunakan counter
-            ?>
-                    <div class="content-card">
-                        <img src="images/minuman/<?= $counter; ?>.jpg" alt="<?= htmlspecialchars($minuman['nama_minuman']); ?>" class="card-image">
-                        <div class="card-content">
-                            <h3><?= htmlspecialchars($minuman['nama_minuman']); ?></h3>
-                            <div class="card-tags">
-                                <span class="tag"><?= htmlspecialchars($minuman['daerah_minuman']); ?></span>
-                            </div>
+        if (mysqli_num_rows($resultMinuman) > 0) {
+            while ($minuman = mysqli_fetch_assoc($resultMinuman)) {
+        ?>
+                <div class="content-card">
+                    <img src="images/minuman/<?= htmlspecialchars($minuman['gambar']); ?>" 
+                         alt="<?= htmlspecialchars($minuman['nama_minuman']); ?>" 
+                         class="card-image">
+                    <div class="card-content">
+                        <h3><?= htmlspecialchars($minuman['nama_minuman']); ?></h3>
+                        <div class="card-tags">
+                            <span class="tag"><?= htmlspecialchars($minuman['daerah_minuman']); ?></span>
                         </div>
                     </div>
-            <?php
-                    $counter++; // Tambahkan counter
-                }
+                </div>
+        <?php
             }
-            ?>
-
-        </div>
-    </section>
-
+        }
+        ?>
+    </div>
+</section>
 
 </body>
-
 </html>

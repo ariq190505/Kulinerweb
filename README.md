@@ -1,197 +1,227 @@
-## 👤 Profil Mahasiswa
+# Kuliner Nusantara - Website with Spotify Theme
 
-| Atribut         | Keterangan          |
-| --------------- | ------------------- |
-| **Nama**        | Alvin Alfandy       |
-| **NIM**         | 312310473           |
-| **Kelas**       | TI.23.A.5           |
-| **Mata Kuliah** | Pemrograman Website |
+## Project Overview
 
-# Kuliner Nusantara - Website Kuliner Tradisional Indonesia
+Kuliner Nusantara is a web application designed to showcase traditional Indonesian cuisine, featuring both food and beverages. The project adopts a Spotify-inspired design theme, creating a modern and engaging user experience while exploring the rich culinary heritage of Indonesia.
 
-Selamat datang di repositori Kuliner Nusantara! Proyek ini adalah sebuah website yang menampilkan kekayaan kuliner tradisional Indonesia dengan gaya desain terinspirasi dari Netflix. Website ini dibangun menggunakan PHP dan MySQL untuk backend, serta HTML, CSS, dan JavaScript untuk frontend.
+## Features
 
-## Struktur Proyek
+- **Responsive Design**: Adapts seamlessly to various screen sizes and devices.
+- **Dynamic Content**: Displays food and beverage items fetched from a MySQL database.
+- **CRUD Functionality**: Allows adding, viewing, updating, and deleting culinary items.
+- **Spotify-Inspired UI**: Dark mode interface with green accents and sleek animations.
+- **Search and Filter**: Enables users to easily find specific dishes or drinks.
+- **Contact Form**: Allows visitors to send inquiries or feedback.
 
-Berikut adalah penjelasan detail untuk setiap halaman utama dalam proyek ini:
+## Pages
 
-### 1. Halaman Utama
+### 1. Home (home.php)
 
-![alt text](images/github/image-3.png)
-![alt text](images/github/image-1.png)
-![alt text](images/github/image-2.png)
+The landing page showcases featured content and provides an overview of the website's offerings.
 
-Halaman utama website menampilkan tampilan yang menarik dengan gaya Netflix, termasuk:
+#### Key Elements:
 
-- **Hero Section**:
+- Hero section with a gradient background
+- Featured food and beverage sections
+- Responsive grid layout for content display
+- Hover effects on content cards
 
-  - Menggunakan gambar latar belakang makanan Indonesia
-  - Gradient overlay untuk meningkatkan keterbacaan teks
-  - Judul utama menggunakan font 'Bebas Neue' dengan ukuran besar (5rem)
-  - Deskripsi singkat dengan bayangan teks untuk kontras
+#### Styling Highlights:
 
-- **Bagian "Trending"**:
+- Gradient text effect for the main title
+- Custom scrollbar styling
+- Animated background for visual appeal
 
-  - Menampilkan makanan populer dalam format slider
-  - Menggunakan badge dengan warna Netflix merah
+### 2. About (about.php)
 
-- **Slider Konten**:
+Provides information about the website's mission and the team behind it.
 
-  - Untuk makanan dan minuman tradisional
-  - Menggunakan `overflow-x: auto` dengan scrollbar tersembunyi
-  - Efek hover pada kartu konten (scale dan box-shadow)
+#### Key Elements:
 
-- **Grid Kategori**:
-  - Menampilkan berbagai kategori kuliner dalam format grid responsif
+- Vision and mission statements
+- Team member profiles
+- Gradient background with blur effect
 
-Fitur CSS utama:
+#### Styling Highlights:
 
-- Penggunaan variabel CSS untuk konsistensi warna
-- Flexbox dan Grid untuk layout
-- Media queries untuk responsivitas
-- Animasi hover menggunakan transition
+- Card design for team members with hover effects
+- Animated title with glow effect
+- Responsive layout for various screen sizes
 
-### 2. Halaman About Me
+### 3. Contact (contact.php)
 
-![alt text](images/github/image-5.png)
-![alt text](images/github/image-6.png)
+Allows users to get in touch with the Kuliner Nusantara team.
 
-Halaman ini memberikan informasi tentang Kuliner Nusantara, dengan fitur:
+#### Key Elements:
 
-- **Hero Section**:
+- Contact form with input validation
+- Contact information display
+- Social media links
 
-  - Background image dengan overlay gradient
-  - Judul besar menggunakan font 'Bebas Neue'
-  - Tag-tag Netflix-style di bagian bawah
+#### Styling Highlights:
 
-- **Konten Informatif**:
-  - Menggunakan grid untuk layout responsif
-  - Kartu fitur dengan ikon dan efek hover
+- Glassmorphism effect on the contact form
+- Interactive form elements with focus states
+- Responsive split layout for form and contact info
 
-Fitur CSS utama:
+### 4. 404 Error (404.php)
 
-- Penggunaan flexbox untuk centering konten
-- Box-shadow untuk efek elevasi pada kartu
-- Transisi smooth pada hover efek
+Custom error page for handling not found errors.
 
-### 3. Halaman Kontak
+#### Key Elements:
 
-![alt text](images/github/image-7.png)
+- Creative error message related to culinary theme
+- Button to return to the home page
 
-Halaman kontak menyediakan cara bagi pengunjung untuk menghubungi tim Kuliner Nusantara:
+#### Styling Highlights:
 
-- **Form Kontak**:
+- Large, eye-catching 404 text with shadow effect
+- Animated background
+- Responsive design for all devices
 
-  - Input fields dengan styling konsisten
-  - Validasi form menggunakan HTML5 dan JavaScript
-  - Tombol submit dengan efek hover
+### 5. Food View (makananview.php)
 
-- **Informasi Kontak**:
-  - Layout grid untuk menampilkan berbagai informasi kontak
-  - Ikon untuk visualisasi informasi
+Displays a grid of traditional Indonesian dishes.
 
-Fitur CSS utama:
+#### Key Elements:
 
-- Custom styling untuk form elements
-- Penggunaan `:focus` pseudo-class untuk meningkatkan aksesibilitas
-- Responsivitas menggunakan media queries
+- Grid layout of food items
+- Add, edit, and delete functionality
+- Pagination or infinite scroll
 
-### 4. Halaman Daftar Makanan dan Minuman
+#### Styling Highlights:
 
-![alt text](images/github/image-8.png)
-![alt text](images/github/image-9.png)
+- Card design with hover effects
+- Lazy loading for images
+- Smooth animations on card interactions
 
-Menampilkan daftar makanan dan minuman tradisional dari database:
+### 6. Add Food (makananadd.php)
 
-- **Grid Layout**:
+Form to add new traditional dishes to the database.
 
-  - Menggunakan CSS Grid dengan auto-fill untuk layout responsif
-  - Gap antara item grid untuk spacing yang konsisten
+#### Key Elements:
 
-- **Kartu Konten**:
+- Input fields for dish name and origin
+- Form validation
+- Submit and cancel buttons
 
-  - Efek hover dengan transformasi scale dan box-shadow
-  - Gambar dengan `object-fit: cover` untuk konsistensi tampilan
+#### Styling Highlights:
 
-- **Tombol Aksi**:
-  - Styling konsisten untuk tombol edit dan hapus
-  - Efek hover untuk feedback visual
+- Floating label effect on input fields
+- Gradient submit button
+- Responsive form layout
 
-Fitur CSS utama:
+### 7. Update Food (makananupdate.php)
 
-- Grid template columns dengan minmax untuk responsivitas
-- Transition pada hover effects untuk animasi smooth
-- Penggunaan variabel CSS untuk konsistensi warna
+Allows editing of existing food entries.
 
-### 5. Halaman Tambah dan Edit
+#### Key Elements:
 
-## Halaman Tambah
+- Pre-filled form with existing data
+- Update and cancel buttons
+- Form validation
 
-![alt text](images/github/image-10.png)
+#### Styling Highlights:
 
-## Halaman edit/update
+- Similar styling to Add Food page for consistency
+- Visual feedback on form interaction
 
-![alt text](images/github/image-11.png)
+### 8. Beverage View (minumanview.php)
 
-Form untuk menambahkan atau mengedit data makanan dan minuman:
+Similar to Food View, but for traditional Indonesian beverages.
 
-- **Form Layout**:
+#### Key Elements:
 
-  - Struktur form yang konsisten dengan styling Netflix
-  - Label dan input yang jelas dan mudah dibaca
+- Grid layout of beverage items
+- CRUD functionality
+- Search and filter options
 
-- **Validasi Form**:
+#### Styling Highlights:
 
-  - Menggunakan atribut HTML5 seperti required
-  - Custom validasi JavaScript
+- Consistent card design with Food View
+- Smooth transitions on grid updates
 
-- **Tombol Aksi**:
-  - Styling konsisten dengan halaman lain
-  - Penempatan yang intuitif (cancel di kiri, submit di kanan)
+### 9. Add Beverage (minumanadd.php)
 
-Fitur CSS utama:
+Form to add new traditional beverages to the database.
 
-- Custom styling untuk form inputs
-- Penggunaan `:focus` pseudo-class untuk accessibility
-- Flexbox untuk layout tombol
+#### Key Elements:
 
-### 6. Halaman 404 (404.php)
+- Input fields for beverage name and origin
+- Form validation
+- Submit and cancel buttons
 
-![alt text](images/github/image-12.png)
+#### Styling Highlights:
 
-Halaman error custom dengan tema Kuliner Nusantara:
+- Consistent with Add Food page
+- Animated form submission feedback
 
-- **Layout Sentris**:
+### 10. Update Beverage (minumanupdate.php)
 
-  - Menggunakan flexbox untuk centering konten vertikal dan horizontal
+Allows editing of existing beverage entries.
 
-- **Tipografi Menarik**:
+#### Key Elements:
 
-  - Kode error besar dengan efek bayangan teks
-  - Judul dan pesan error yang ramah pengguna
+- Pre-filled form with existing data
+- Update and cancel buttons
+- Form validation
 
-- **Gambar Tematik**:
+#### Styling Highlights:
 
-  - Gambar makanan Indonesia yang ditampilkan dalam bentuk lingkaran
-  - Menggunakan box-shadow untuk efek elevasi
+- Matches Update Food page for consistency
+- Smooth transitions on form state changes
 
-- **Tombol Kembali**:
-  - Styling konsisten dengan tema Netflix
-  - Efek hover untuk feedback interaktif
+## Technical Details
 
-Fitur CSS utama:
+### Frontend
 
-- Penggunaan flexbox untuk layout sentris
-- Text-shadow untuk efek visual pada teks
-- Border-radius dan box-shadow untuk styling gambar
-- Media queries untuk responsivitas pada perangkat mobile
-
-## Teknologi yang Digunakan
-
-- PHP 7.4+
-- MySQL 5.7+
 - HTML5
-- CSS3 (dengan variabel CSS untuk tema)
-- JavaScript (ES6+)
-- Font Awesome untuk ikon
-- Google Fonts (Bebas Neue dan Poppins)
+- CSS3 with custom properties for theming
+- Vanilla JavaScript for interactivity
+- Responsive design using Flexbox and CSS Grid
+
+### Backend
+
+- PHP for server-side logic
+- MySQL database for data storage
+- PDO for database connections (recommended upgrade from mysqli)
+
+### Performance Optimizations
+
+- Lazy loading of images
+- Minified CSS and JavaScript
+- Optimized database queries
+
+### Security Measures
+
+- Input sanitization to prevent XSS attacks
+- Prepared statements to prevent SQL injection
+- CSRF protection on forms
+
+## Setup and Installation
+
+1. Clone the repository to your local machine or server.
+2. Import the provided SQL file to set up the database structure.
+3. Configure the database connection in `includes/config.php`.
+4. Ensure your web server supports PHP and has the necessary extensions enabled.
+5. Access the website through your web server's URL.
+
+## Future Enhancements
+
+- User authentication system
+- Advanced search functionality
+- Recipe pages for each dish and beverage
+- User ratings and reviews
+- Integration with social media platforms
+
+## Contributing
+
+Contributions to Kuliner Nusantara are welcome. Please ensure to follow the existing code style and submit pull requests for any new features or bug fixes.
+
+## License
+
+This project is open-source and available under the MIT License.
+
+---
+
+Developed with ❤️ by the Kuliner Nusantara Team
