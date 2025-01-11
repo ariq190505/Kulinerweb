@@ -23,7 +23,7 @@ Sebuah platform berbagi resep dan inspirasi kuliner Nusantara dengan tampilan be
 * Berbagi resep ke media sosial
 
 ## Fitur Halaman Utama
-![alt text](home.png)
+![alt text](Gambar/home.png)
 Halaman utama terdiri dari beberapa elemen kunci:
 
 1. **Navigation Bar**
@@ -57,7 +57,7 @@ Antarmuka mengikuti desain yang bersih dan modern dengan hierarki yang jelas dan
 Situs web ini bertujuan membantu pengguna menjelajahi dan menemukan masakan tradisional Indonesia melalui koleksi lengkap pilihan makanan dan minuman dari seluruh nusantara.
 
 ## Fitur Halaman Makanan
-![alt text](Halamanmakanan-1.png)
+![alt text](Gambar/Halamanmakanan.png)
 Halaman ini dirancang untuk memudahkan pengguna dalam melihat, mengelola, dan menambahkan makanan ke dalam koleksi. Berikut adalah elemen-elemen kunci pada halaman ini:
 
 1. **Daftar Makanan**
@@ -86,7 +86,7 @@ Halaman ini dirancang untuk memudahkan pengguna dalam melihat, mengelola, dan me
    - Halaman menggunakan tema gelap dengan elemen-elemen berwarna merah dan abu-abu untuk memberikan kontras yang modern.
 
 ## Fitur Halaman Minuman
-![alt text](Halamanminuman.png)
+![alt text](Gambar/Halamanminuman.png)
 Halaman ini menyediakan fitur untuk menampilkan, mengelola, dan menambahkan minuman ke dalam koleksi. Berikut adalah elemen-elemen utamanya:
 
 1. **Daftar Minuman**
@@ -114,7 +114,7 @@ Halaman ini menyediakan fitur untuk menampilkan, mengelola, dan menambahkan minu
 6. **Desain Mode Gelap**
    - Halaman ini menggunakan tema gelap dengan elemen berwarna merah dan abu-abu untuk menjaga estetika yang konsisten dengan halaman lainnya.
 ## About Us
-![alt text](About.png)
+![alt text](Gambar/About.png)
 Halaman **About Us** di website Kuliner Nusantara bertujuan untuk memperkenalkan platform ini sebagai wadah eksplorasi dan pelestarian kekayaan kuliner tradisional Indonesia. Halaman ini terdiri dari beberapa bagian:
 
 1. **Judul dan Deskripsi Utama**:
@@ -130,7 +130,7 @@ Halaman **About Us** di website Kuliner Nusantara bertujuan untuk memperkenalkan
 
 Halaman ini dirancang dengan tampilan yang sederhana namun informatif, menggunakan latar belakang gelap dengan teks putih dan aksen merah untuk menekankan poin-poin penting.
 ## Contact
-![alt text](Contact.png)
+![alt text](Gambar/Contact.png)
 Halaman **Hubungi Kami** pada website Kuliner Nusantara dirancang untuk memudahkan pengunjung menghubungi tim pengelola. Halaman ini terdiri dari beberapa elemen penting:
 
 1. **Judul dan Deskripsi**:
@@ -151,7 +151,7 @@ Halaman **Hubungi Kami** pada website Kuliner Nusantara dirancang untuk memudahk
 Halaman ini menggunakan desain yang modern dengan latar belakang gelap, memberikan kesan profesional dan nyaman untuk pengguna. Elemen kontak diberi ikon yang mudah dikenali, dan formulir interaktif memudahkan pengunjung dalam menyampaikan pesan atau pertanyaan.
 
 ## Tambah Makanan Tradisional
-![alt text](Tambahmakanan.png)
+![alt text](Gambar/Tambahmakanan.png)
 Halaman **Tambah Makanan Tradisional** pada website Kuliner Nusantara dirancang untuk memungkinkan pengguna menambahkan data hidangan tradisional baru ke dalam koleksi kuliner nusantara. Halaman ini memiliki elemen berikut:
 
 1. **Judul dan Deskripsi**:
@@ -169,7 +169,7 @@ Halaman **Tambah Makanan Tradisional** pada website Kuliner Nusantara dirancang 
 Desain halaman ini sederhana dengan latar belakang gelap dan tombol berwarna merah untuk menarik perhatian. Elemen form dirancang intuitif agar pengguna mudah memahami fungsinya.
 
 ## Tambah Minuman Tradisional
-![alt text](Tambahminuman.png)
+![alt text](Gambar/Tambahminuman.png)
 Halaman **Tambah Minuman Tradisional** pada website Kuliner Nusantara dirancang untuk memungkinkan pengguna menambahkan data hidangan tradisional baru ke dalam koleksi kuliner nusantara. Halaman ini memiliki elemen berikut:
 
 1. **Judul dan Deskripsi**:
@@ -187,7 +187,7 @@ Halaman **Tambah Minuman Tradisional** pada website Kuliner Nusantara dirancang 
 Desain halaman ini sederhana dengan latar belakang gelap dan tombol berwarna merah untuk menarik perhatian. Elemen form dirancang intuitif agar pengguna mudah memahami fungsinya.
 
 ## Halaman 404 
-![alt text](404.png)
+![alt text](Gambar/404.png)
 Halaman **404.php** adalah halaman khusus yang ditampilkan ketika pengguna mencoba mengakses URL yang tidak valid atau halaman yang tidak ditemukan di website Kuliner Nusantara. Halaman ini memberikan informasi bahwa halaman yang dicari tidak tersedia, serta membantu pengguna untuk kembali ke halaman utama atau mencari konten lainnya.
 
 ### Elemen Halaman:
