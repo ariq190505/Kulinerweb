@@ -209,7 +209,7 @@ Halaman 404 dirancang untuk:
 ### Contoh Teks:
 Pesan yang mungkin ditampilkan di halaman ini:
 - "Maaf, halaman yang Anda cari tidak ditemukan."
-- "Kembali ke Beranda atau coba gunakan fitur pencarian."
+- "Kembali ke  atau coba gunakan fitur pencarian."
 
 Halaman ini juga menjaga konsistensi dengan tema desain website, menggunakan latar belakang gelap dan teks yang sesuai agar selaras dengan halaman lainnya.
 
